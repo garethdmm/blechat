@@ -19,6 +19,17 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
+    CGRect screenRect = self.view.frame;
+    CGRect cellRect = self.inputCell.frame;
+
+    cellRect.origin.y = screenRect.size.height - 216 - 44; // just above the keyboard
+    self.inputCell.frame = cellRect;
+    
+    CGRect tableRect = self.tableView.frame;
+    tableRect.origin.y = 44; // just below the navbar
+    tableRect.size.height = cellRect.origin.y - 44; // between the navbar and the cell
+    self.tableView.frame = tableRect;
+    
     self.messages = [[NSMutableArray alloc] initWithCapacity:200];
     
     self.chatService = [[ChatService alloc] init];
@@ -37,6 +48,8 @@
     NSLog(@"ChatVC --- DidClickSend");
     NSString *message = self.messageField.text;
     [self.chatService sendMessage:message];
+    [self.messages addObject:message];
+    [self.tableView reloadData];
 }
 
 # pragma mark - ChatDelegate methods

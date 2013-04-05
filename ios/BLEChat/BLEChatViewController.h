@@ -16,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UITextField *messageField;
 @property (strong, nonatomic) IBOutlet UIButton *sendButton;
+@property (strong, nonatomic) IBOutlet UITableViewCell *inputCell;
 
 @property (strong, nonatomic) NSMutableArray *messages;
 
