@@ -1,0 +1,339 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3805764B1704ECAA007FF75C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3805764A1704ECAA007FF75C /* UIKit.framework */; };
+		3805764D1704ECAA007FF75C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3805764C1704ECAA007FF75C /* Foundation.framework */; };
+		3805764F1704ECAA007FF75C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3805764E1704ECAA007FF75C /* CoreGraphics.framework */; };
+		380576551704ECAA007FF75C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 380576531704ECAA007FF75C /* InfoPlist.strings */; };
+		380576571704ECAA007FF75C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 380576561704ECAA007FF75C /* main.m */; };
+		3805765B1704ECAA007FF75C /* BLEChatAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805765A1704ECAA007FF75C /* BLEChatAppDelegate.m */; };
+		3805765D1704ECAA007FF75C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3805765C1704ECAA007FF75C /* Default.png */; };
+		3805765F1704ECAA007FF75C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3805765E1704ECAA007FF75C /* Default@2x.png */; };
+		380576611704ECAA007FF75C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 380576601704ECAA007FF75C /* Default-568h@2x.png */; };
+		380576641704ECAA007FF75C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380576621704ECAA007FF75C /* MainStoryboard.storyboard */; };
+		380576671704ECAA007FF75C /* BLEChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380576661704ECAA007FF75C /* BLEChatViewController.m */; };
+		388BEEB1170B8DAA00118025 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388BEEB0170B8DAA00118025 /* CoreBluetooth.framework */; };
+		3896CC62170B8EAD00C1459C /* ChatService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3896CC61170B8EAD00C1459C /* ChatService.m */; };
+		3896CC67170B992400C1459C /* BLEUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3896CC64170B992400C1459C /* BLEUtility.m */; };
+		3896CC68170B992400C1459C /* LeDiscovery.m in Sources */ = {isa = PBXBuildFile; fileRef = 3896CC66170B992400C1459C /* LeDiscovery.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		380576471704ECAA007FF75C /* BLEChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLEChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3805764A1704ECAA007FF75C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3805764C1704ECAA007FF75C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3805764E1704ECAA007FF75C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		380576521704ECAA007FF75C /* BLEChat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BLEChat-Info.plist"; sourceTree = "<group>"; };
+		380576541704ECAA007FF75C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		380576561704ECAA007FF75C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		380576581704ECAA007FF75C /* BLEChat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BLEChat-Prefix.pch"; sourceTree = "<group>"; };
+		380576591704ECAA007FF75C /* BLEChatAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLEChatAppDelegate.h; sourceTree = "<group>"; };
+		3805765A1704ECAA007FF75C /* BLEChatAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEChatAppDelegate.m; sourceTree = "<group>"; };
+		3805765C1704ECAA007FF75C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3805765E1704ECAA007FF75C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		380576601704ECAA007FF75C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		380576631704ECAA007FF75C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		380576651704ECAA007FF75C /* BLEChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLEChatViewController.h; sourceTree = "<group>"; };
+		380576661704ECAA007FF75C /* BLEChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEChatViewController.m; sourceTree = "<group>"; };
+		388BEEB0170B8DAA00118025 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		3896CC60170B8EAD00C1459C /* ChatService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatService.h; sourceTree = "<group>"; };
+		3896CC61170B8EAD00C1459C /* ChatService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatService.m; sourceTree = "<group>"; };
+		3896CC63170B992400C1459C /* BLEUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEUtility.h; sourceTree = "<group>"; };
+		3896CC64170B992400C1459C /* BLEUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEUtility.m; sourceTree = "<group>"; };
+		3896CC65170B992400C1459C /* LeDiscovery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeDiscovery.h; sourceTree = "<group>"; };
+		3896CC66170B992400C1459C /* LeDiscovery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeDiscovery.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		380576441704ECAA007FF75C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				388BEEB1170B8DAA00118025 /* CoreBluetooth.framework in Frameworks */,
+				3805764B1704ECAA007FF75C /* UIKit.framework in Frameworks */,
+				3805764D1704ECAA007FF75C /* Foundation.framework in Frameworks */,
+				3805764F1704ECAA007FF75C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3805763E1704ECAA007FF75C = {
+			isa = PBXGroup;
+			children = (
+				388BEEB0170B8DAA00118025 /* CoreBluetooth.framework */,
+				380576501704ECAA007FF75C /* BLEChat */,
+				380576491704ECAA007FF75C /* Frameworks */,
+				380576481704ECAA007FF75C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		380576481704ECAA007FF75C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				380576471704ECAA007FF75C /* BLEChat.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		380576491704ECAA007FF75C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3805764A1704ECAA007FF75C /* UIKit.framework */,
+				3805764C1704ECAA007FF75C /* Foundation.framework */,
+				3805764E1704ECAA007FF75C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		380576501704ECAA007FF75C /* BLEChat */ = {
+			isa = PBXGroup;
+			children = (
+				3896CC69170B992700C1459C /* tooth */,
+				380576591704ECAA007FF75C /* BLEChatAppDelegate.h */,
+				3805765A1704ECAA007FF75C /* BLEChatAppDelegate.m */,
+				380576621704ECAA007FF75C /* MainStoryboard.storyboard */,
+				380576651704ECAA007FF75C /* BLEChatViewController.h */,
+				380576661704ECAA007FF75C /* BLEChatViewController.m */,
+				3896CC60170B8EAD00C1459C /* ChatService.h */,
+				3896CC61170B8EAD00C1459C /* ChatService.m */,
+				380576511704ECAA007FF75C /* Supporting Files */,
+			);
+			path = BLEChat;
+			sourceTree = "<group>";
+		};
+		380576511704ECAA007FF75C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				380576521704ECAA007FF75C /* BLEChat-Info.plist */,
+				380576531704ECAA007FF75C /* InfoPlist.strings */,
+				380576561704ECAA007FF75C /* main.m */,
+				380576581704ECAA007FF75C /* BLEChat-Prefix.pch */,
+				3805765C1704ECAA007FF75C /* Default.png */,
+				3805765E1704ECAA007FF75C /* Default@2x.png */,
+				380576601704ECAA007FF75C /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3896CC69170B992700C1459C /* tooth */ = {
+			isa = PBXGroup;
+			children = (
+				3896CC63170B992400C1459C /* BLEUtility.h */,
+				3896CC64170B992400C1459C /* BLEUtility.m */,
+				3896CC65170B992400C1459C /* LeDiscovery.h */,
+				3896CC66170B992400C1459C /* LeDiscovery.m */,
+			);
+			name = tooth;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		380576461704ECAA007FF75C /* BLEChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3805766A1704ECAA007FF75C /* Build configuration list for PBXNativeTarget "BLEChat" */;
+			buildPhases = (
+				380576431704ECAA007FF75C /* Sources */,
+				380576441704ECAA007FF75C /* Frameworks */,
+				380576451704ECAA007FF75C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BLEChat;
+			productName = BLEChat;
+			productReference = 380576471704ECAA007FF75C /* BLEChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3805763F1704ECAA007FF75C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BLEChat;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Gareth MacLeod";
+			};
+			buildConfigurationList = 380576421704ECAA007FF75C /* Build configuration list for PBXProject "BLEChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3805763E1704ECAA007FF75C;
+			productRefGroup = 380576481704ECAA007FF75C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				380576461704ECAA007FF75C /* BLEChat */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		380576451704ECAA007FF75C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				380576551704ECAA007FF75C /* InfoPlist.strings in Resources */,
+				3805765D1704ECAA007FF75C /* Default.png in Resources */,
+				3805765F1704ECAA007FF75C /* Default@2x.png in Resources */,
+				380576611704ECAA007FF75C /* Default-568h@2x.png in Resources */,
+				380576641704ECAA007FF75C /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		380576431704ECAA007FF75C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				380576571704ECAA007FF75C /* main.m in Sources */,
+				3805765B1704ECAA007FF75C /* BLEChatAppDelegate.m in Sources */,
+				380576671704ECAA007FF75C /* BLEChatViewController.m in Sources */,
+				3896CC62170B8EAD00C1459C /* ChatService.m in Sources */,
+				3896CC67170B992400C1459C /* BLEUtility.m in Sources */,
+				3896CC68170B992400C1459C /* LeDiscovery.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		380576531704ECAA007FF75C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				380576541704ECAA007FF75C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		380576621704ECAA007FF75C /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				380576631704ECAA007FF75C /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		380576681704ECAA007FF75C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		380576691704ECAA007FF75C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3805766B1704ECAA007FF75C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLEChat/BLEChat-Prefix.pch";
+				INFOPLIST_FILE = "BLEChat/BLEChat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3805766C1704ECAA007FF75C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BLEChat/BLEChat-Prefix.pch";
+				INFOPLIST_FILE = "BLEChat/BLEChat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		380576421704ECAA007FF75C /* Build configuration list for PBXProject "BLEChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				380576681704ECAA007FF75C /* Debug */,
+				380576691704ECAA007FF75C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3805766A1704ECAA007FF75C /* Build configuration list for PBXNativeTarget "BLEChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3805766B1704ECAA007FF75C /* Debug */,
+				3805766C1704ECAA007FF75C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3805763F1704ECAA007FF75C /* Project object */;
+}
