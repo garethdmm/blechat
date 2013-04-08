@@ -318,18 +318,6 @@
 {
     NSLog(@"LeDiscovery --- DidDisconnectPeripheral");
     [self.peripheralDelegate didDisconnectPeripheral:peripheral];
-    
-	/*LeTemperatureAlarmService	*service	= nil;
-    
-	for (service in connectedServices) {
-		if ([service peripheral] == peripheral) {
-			[connectedServices removeObject:service];
-            [peripheralDelegate alarmServiceDidChangeStatus:service];
-			break;
-		}
-	}
-    
-	[discoveryDelegate discoveryDidRefresh];*/
 }
 
 

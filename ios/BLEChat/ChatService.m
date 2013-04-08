@@ -160,6 +160,8 @@ NSString *channelCharacteristicUUID = @"d215c377-8cf3-443b-a08f-221af34fbc8c";
         if ([[BLEUtility CBUUIDToString:characteristic.UUID] isEqualToString:channelCharacteristicUUID]) {
             
             NSLog(@"Subscribing to Chat Channel: %@", [BLEUtility CBUUIDToString:characteristic.UUID]);
+            
+            [self.delegate didReceiveMessage:[NSString stringWithFormat:@"Connected to %@", peripheral.name]];
             [peripheral setNotifyValue:true forCharacteristic:characteristic];
         }
     }
@@ -187,6 +189,9 @@ NSString *channelCharacteristicUUID = @"d215c377-8cf3-443b-a08f-221af34fbc8c";
 
 - (void)didDisconnectPeripheral:(CBPeripheral *)peripheral {
     NSLog(@"Disconnected Peripheral");
+    [self.connectedPeripherals removeObject:peripheral];
+    /// Uhhhh... we should never do this. Reconnect it dumbass.
+    [[LeDiscovery sharedInstance] connectPeripheral:peripheral];
 }
 
 # pragma mark - connection timeout stuff

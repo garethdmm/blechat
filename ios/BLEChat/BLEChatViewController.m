@@ -44,12 +44,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)scrollToNewMessage {
+    NSIndexPath * path = [NSIndexPath indexPathForRow:([self.tableView numberOfRowsInSection:0] - 1) inSection:0];
+    
+    [self.tableView scrollToRowAtIndexPath:path atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+}
+
 - (IBAction)didClickSend:(id)sender {
     NSLog(@"ChatVC --- DidClickSend");
     NSString *message = self.messageField.text;
     [self.chatService sendMessage:message];
     [self.messages addObject:message];
     [self.tableView reloadData];
+    [self scrollToNewMessage];
 }
 
 # pragma mark - ChatDelegate methods
@@ -58,6 +65,7 @@
     NSLog(@"ChatVC --- DidReceiveMessage");
     [self.messages addObject:message];
     [self.tableView reloadData];
+    [self scrollToNewMessage];
 }
 
 - (void)serviceIsReady {
