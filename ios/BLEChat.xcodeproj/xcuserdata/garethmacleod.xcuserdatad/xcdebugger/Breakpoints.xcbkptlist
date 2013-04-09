@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BLEChat/ChatService.m"
-         timestampString = "386805744.907016"
+         timestampString = "387155595.772089"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "146"
-         endingLineNumber = "146"
+         startingLineNumber = "169"
+         endingLineNumber = "169"
          landmarkName = "-peripheral:didDiscoverServices:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BLEChat/ChatService.m"
-         timestampString = "386802737.061562"
+         timestampString = "387136740.954592"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "23"
-         endingLineNumber = "23"
+         startingLineNumber = "25"
+         endingLineNumber = "25"
          landmarkName = "-init"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BLEChat/ChatService.m"
-         timestampString = "386802737.061562"
+         timestampString = "387155595.772089"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "98"
-         endingLineNumber = "98"
+         startingLineNumber = "111"
+         endingLineNumber = "111"
          landmarkName = "-peripheralManagerDidUpdateState:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BLEChat/ChatService.m"
-         timestampString = "386802737.061562"
+         timestampString = "387136740.954592"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "36"
-         endingLineNumber = "36"
+         startingLineNumber = "38"
+         endingLineNumber = "38"
          landmarkName = "-initPeripheral"
          landmarkType = "5">
       </FileBreakpoint>
@@ -60,11 +60,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BLEChat/ChatService.m"
-         timestampString = "386802737.061562"
+         timestampString = "387155595.772089"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "96"
-         endingLineNumber = "96"
+         startingLineNumber = "109"
+         endingLineNumber = "109"
          landmarkName = "-peripheralManagerDidUpdateState:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -73,11 +73,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BLEChat/ChatService.m"
-         timestampString = "387133641.307055"
+         timestampString = "387164198.856547"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "209"
-         endingLineNumber = "209"
+         startingLineNumber = "233"
+         endingLineNumber = "233"
          landmarkName = "-cancelConnectionTimeoutMonitor:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -86,11 +86,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BLEChat/ChatService.m"
-         timestampString = "387133641.307055"
+         timestampString = "387164198.856547"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "217"
-         endingLineNumber = "217"
+         startingLineNumber = "241"
+         endingLineNumber = "241"
          landmarkName = "-connectionDidTimeout:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -99,11 +99,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BLEChat/ChatService.m"
-         timestampString = "387133641.307055"
+         timestampString = "387164198.856547"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "202"
-         endingLineNumber = "202"
+         startingLineNumber = "226"
+         endingLineNumber = "226"
          landmarkName = "-startConnectionTimeoutMonitor:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -112,11 +112,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "BLEChat/ChatService.m"
-         timestampString = "387133641.307055"
+         timestampString = "387164198.856547"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "203"
-         endingLineNumber = "203"
+         startingLineNumber = "227"
+         endingLineNumber = "227"
          landmarkName = "-startConnectionTimeoutMonitor:"
          landmarkType = "5">
       </FileBreakpoint>

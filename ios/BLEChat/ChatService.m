@@ -19,6 +19,8 @@ NSString *channelCharacteristicUUID = @"d215c377-8cf3-443b-a08f-221af34fbc8c";
     [super init];
 
     self.connectedPeripherals = [[NSMutableArray alloc] initWithCapacity:10];
+
+    self.isDoneSettingUp = false;
     
     [self initPeripheral];
     
@@ -61,6 +63,7 @@ NSString *channelCharacteristicUUID = @"d215c377-8cf3-443b-a08f-221af34fbc8c";
 
 - (void)peripheralDoneSettingUp {
     NSLog(@"ChatService --- peripheralDoneSettingUp");
+    self.isDoneSettingUp = true;
     [self initCentral];
 }
 
@@ -74,6 +77,21 @@ NSString *channelCharacteristicUUID = @"d215c377-8cf3-443b-a08f-221af34fbc8c";
 
 #pragma mark - CBPeripheralManagerDelegate
 
+- (void)peripheralManager:(CBPeripheralManager *)peripheral central:(CBCentral *)central didSubscribeToCharacteristic:(CBCharacteristic *)characteristic {
+    NSLog(@"ChatService --- centralDidSubscribe");
+    [self.delegate didReceiveMessage:@"New central is listening" fromSender:@"Admin"];
+}
+
+- (void)startAdvertising {
+    NSLog(@"ChatService --- StartAdvertising");
+    int uid = arc4random() % 10;
+ 
+    [self.peripheralManager startAdvertising:@{
+             CBAdvertisementDataLocalNameKey: [NSString stringWithFormat:@"BLEChat %d", uid],
+            CBAdvertisementDataServiceUUIDsKey : @[[CBUUID UUIDWithString:chatServiceUUID]]
+     }];
+}
+
 - (void)peripheralManagerDidStartAdvertising:(CBPeripheralManager *)peripheral error:(NSError *)error {
     NSLog(@"ChatService --- DidStartAdvertising");
     [self peripheralDoneSettingUp];
@@ -82,12 +100,7 @@ NSString *channelCharacteristicUUID = @"d215c377-8cf3-443b-a08f-221af34fbc8c";
 - (void)peripheralManager:(CBPeripheralManager *)peripheral didAddService:(CBService *)service error:(NSError *)error {
     NSLog(@"ChatService --- didAddService");
 
-    int uid = arc4random() % 10;
-    
-    [self.peripheralManager startAdvertising:@{
-             CBAdvertisementDataLocalNameKey: [NSString stringWithFormat:@"BLEChat %d", uid],
-            CBAdvertisementDataServiceUUIDsKey : @[[CBUUID UUIDWithString:chatServiceUUID]]
-     }];
+    [self startAdvertising];
 }
 
 - (void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral {
@@ -125,10 +138,20 @@ NSString *channelCharacteristicUUID = @"d215c377-8cf3-443b-a08f-221af34fbc8c";
 
 - (void)discoveryStatePoweredOn {
     NSLog(@"ChatService --- LeDiscovery is powered on");
+    [self startScanning];
+}
+
+- (void)startScanning {
+    NSLog(@"ChatService --- Scanning");
     [[LeDiscovery sharedInstance] startScanningForUUIDString:chatServiceUUID];
+    [self performSelector:@selector(startScanning) withObject:nil afterDelay:10];
 }
 
 #pragma mark - CBPeripheralDelegate
+
+- (void)peripheralDidInvalidateServices:(CBPeripheral *)peripheral {
+    NSLog(@"ChatService --- PeripheralDidInvalidateService");
+}
 
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {
     NSString *uuid = [BLEUtility CBUUIDToString:[CBUUID UUIDWithCFUUID:peripheral.UUID]];
@@ -161,7 +184,8 @@ NSString *channelCharacteristicUUID = @"d215c377-8cf3-443b-a08f-221af34fbc8c";
             
             NSLog(@"Subscribing to Chat Channel: %@", [BLEUtility CBUUIDToString:characteristic.UUID]);
             
-            [self.delegate didReceiveMessage:[NSString stringWithFormat:@"Connected to %@", peripheral.name]];
+            [self.delegate didReceiveMessage:[NSString stringWithFormat:@"Now listening to \"%@\"", peripheral.name] fromSender:@"Admin"];
+            
             [peripheral setNotifyValue:true forCharacteristic:characteristic];
         }
     }
@@ -173,7 +197,7 @@ NSString *channelCharacteristicUUID = @"d215c377-8cf3-443b-a08f-221af34fbc8c";
     
     NSString *message = [BLEUtility stringFromData:characteristic.value];
 
-    [self.delegate didReceiveMessage:message];
+    [self.delegate didReceiveMessage:message fromSender:peripheral.name];
 }
 
 #pragma mark - LePeripheralDelegate

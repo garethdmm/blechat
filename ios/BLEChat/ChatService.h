@@ -18,7 +18,7 @@ extern NSString *channelCharacteristicUUID;// = @"d215c377-8cf3-443b-a08f-221af3
 @protocol ChatDelegate <NSObject>
 
 // calls the delegate when we receieve a chat message
-- (void)didReceiveMessage:(NSString *)message;
+- (void)didReceiveMessage:(NSString *)message fromSender:(NSString *)sender;
 
 // calls the delegate when all the bluetooth stuff is ready to go
 - (void)serviceIsReady;
@@ -37,6 +37,8 @@ extern NSString *channelCharacteristicUUID;// = @"d215c377-8cf3-443b-a08f-221af3
 @property (strong, nonatomic) NSMutableArray *connectedPeripherals;
 @property (strong, nonatomic) CBMutableService *chatChannelService;
 @property (strong, nonatomic) CBMutableCharacteristic *chatChannelCharacteristic;
+
+@property (atomic) BOOL isDoneSettingUp;
 
 - (void)sendMessage:(NSString *)message;
 

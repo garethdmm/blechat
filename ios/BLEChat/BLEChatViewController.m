@@ -7,6 +7,8 @@
 //
 
 #import "BLEChatViewController.h"
+#import "ChatCell.h"
+#import "Message.h"
 
 @interface BLEChatViewController ()
 
@@ -34,6 +36,9 @@
     
     self.chatService = [[ChatService alloc] init];
     [self.chatService setDelegate:self];
+   
+    UINib *cellNib = [UINib nibWithNibName:@"ChatCell" bundle:nil];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:@"ChatCell"];
     
     [self.messageField becomeFirstResponder];
 }
@@ -41,6 +46,7 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    NSLog(@"MEMORY WARNING BRO");
     // Dispose of any resources that can be recreated.
 }
 
@@ -54,23 +60,34 @@
     NSLog(@"ChatVC --- DidClickSend");
     NSString *message = self.messageField.text;
     [self.chatService sendMessage:message];
-    [self.messages addObject:message];
+
+    Message *msg = [[Message alloc] init];
+    msg.messageText = message;
+    msg.sender = @"Me";
+    msg.timestamp = [NSDate date];
+    
+    [self.messages addObject:msg];
     [self.tableView reloadData];
     [self scrollToNewMessage];
 }
 
 # pragma mark - ChatDelegate methods
 
-- (void)didReceiveMessage:(NSString *)message {
+- (void)didReceiveMessage:(NSString *)message fromSender:(NSString *)sender {
     NSLog(@"ChatVC --- DidReceiveMessage");
-    [self.messages addObject:message];
+
+    Message *msg = [[Message alloc] init];
+    msg.messageText = message;
+    msg.sender = sender;
+    msg.timestamp = [NSDate date];
+    
+    [self.messages addObject:msg];
     [self.tableView reloadData];
     [self scrollToNewMessage];
 }
 
 - (void)serviceIsReady {
     NSLog(@"ChatVC --- ServiceIsReady");
-    [self.messages addObject:@"Bluetooth is ready"];
     [self.tableView reloadData];
 }
 
@@ -87,9 +104,18 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MessageCell"];
+   
+    ChatCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"ChatCell"];
+  
+    Message *msg = [self.messages objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = (NSString *)[self.messages objectAtIndex:indexPath.row];
+    NSDateFormatter *DateFormatter=[[NSDateFormatter alloc] init];
+    [DateFormatter setDateFormat:@"hh:mm"];
+    NSLog(@"%@",[DateFormatter stringFromDate:[NSDate date]]);
+    
+    cell.messageLabel.text = msg.messageText;
+    cell.nameLabel.text = msg.sender;
+    cell.timestampLabel.text = [DateFormatter stringFromDate:msg.timestamp];
     
     return cell;
 }

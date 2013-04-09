@@ -22,6 +22,9 @@
 		3896CC62170B8EAD00C1459C /* ChatService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3896CC61170B8EAD00C1459C /* ChatService.m */; };
 		3896CC67170B992400C1459C /* BLEUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3896CC64170B992400C1459C /* BLEUtility.m */; };
 		3896CC68170B992400C1459C /* LeDiscovery.m in Sources */ = {isa = PBXBuildFile; fileRef = 3896CC66170B992400C1459C /* LeDiscovery.m */; };
+		38FBD4F717139F5C004B692D /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38FBD4F617139F5C004B692D /* ChatCell.xib */; };
+		38FBD4FA1713A011004B692D /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FBD4F91713A011004B692D /* ChatCell.m */; };
+		38FBD4FD1713A1FA004B692D /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FBD4FC1713A1FA004B692D /* Message.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,11 @@
 		3896CC64170B992400C1459C /* BLEUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEUtility.m; sourceTree = "<group>"; };
 		3896CC65170B992400C1459C /* LeDiscovery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeDiscovery.h; sourceTree = "<group>"; };
 		3896CC66170B992400C1459C /* LeDiscovery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeDiscovery.m; sourceTree = "<group>"; };
+		38FBD4F617139F5C004B692D /* ChatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatCell.xib; sourceTree = "<group>"; };
+		38FBD4F81713A011004B692D /* ChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
+		38FBD4F91713A011004B692D /* ChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
+		38FBD4FB1713A1FA004B692D /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		38FBD4FC1713A1FA004B692D /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,11 @@
 				380576661704ECAA007FF75C /* BLEChatViewController.m */,
 				3896CC60170B8EAD00C1459C /* ChatService.h */,
 				3896CC61170B8EAD00C1459C /* ChatService.m */,
+				38FBD4FB1713A1FA004B692D /* Message.h */,
+				38FBD4FC1713A1FA004B692D /* Message.m */,
+				38FBD4F617139F5C004B692D /* ChatCell.xib */,
+				38FBD4F81713A011004B692D /* ChatCell.h */,
+				38FBD4F91713A011004B692D /* ChatCell.m */,
 				380576511704ECAA007FF75C /* Supporting Files */,
 			);
 			path = BLEChat;
@@ -191,6 +204,7 @@
 				3805765F1704ECAA007FF75C /* Default@2x.png in Resources */,
 				380576611704ECAA007FF75C /* Default-568h@2x.png in Resources */,
 				380576641704ECAA007FF75C /* MainStoryboard.storyboard in Resources */,
+				38FBD4F717139F5C004B692D /* ChatCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +221,8 @@
 				3896CC62170B8EAD00C1459C /* ChatService.m in Sources */,
 				3896CC67170B992400C1459C /* BLEUtility.m in Sources */,
 				3896CC68170B992400C1459C /* LeDiscovery.m in Sources */,
+				38FBD4FA1713A011004B692D /* ChatCell.m in Sources */,
+				38FBD4FD1713A1FA004B692D /* Message.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
